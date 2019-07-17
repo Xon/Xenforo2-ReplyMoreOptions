@@ -1,0 +1,9 @@
+{
+    "template": "thread_view",
+    "description": "Enable 'More options\" button in threads",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro template=\"quick_reply_macros\" name=\"body\"",
+    "replace": "<xf:set var=\"$svMoreOptions\" value=\"{{ true }}\" />\n$0"
+}
