@@ -2,14 +2,15 @@
     "legacy_addon_id": "SV_ReplyMoreOptions",
     "title": "Reply More Options",
     "description": "Adds a 'More options' button to the editor for limited content types",
-    "version_id": 1000000,
-    "version_string": "1.0.0",
+    "version_id": 1000100,
+    "version_string": "1.0.1",
     "dev": "Xon",
     "dev_url": "https://atelieraphelion.com",
     "faq_url": "",
     "support_url": "",
     "extra_urls": [],
     "require" : {
+        "XF": [2010070, "XenForo 2.1.0+"],
         "php": ["7.0.0", "PHP 7.0.0+"]
     },
     "icon": ""
