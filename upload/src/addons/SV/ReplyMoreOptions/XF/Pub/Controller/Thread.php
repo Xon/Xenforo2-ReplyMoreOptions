@@ -14,11 +14,11 @@ class Thread extends XFCP_Thread
         if ($this->filter('more_options', 'str'))
         {
             $this->actionDraft($params);
-            return $this->rerouteController(__CLASS__, 'reply', $params);
+            return $this->rerouteController($this->rootClass, 'reply', $params);
         }
         else if (!$this->isPost())
         {
-            return $this->rerouteController(__CLASS__, 'reply', $params);
+            return $this->rerouteController($this->rootClass, 'reply', $params);
         }
 
         return parent::actionAddReply($params);
