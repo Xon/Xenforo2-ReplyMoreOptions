@@ -3,12 +3,23 @@
 namespace SV\ReplyMoreOptions\XF\Pub\Controller;
 
 use XF\Mvc\ParameterBag;
+use XF\Mvc\Reply\View as ViewReply;
 
 /**
- * Extends \XF\Pub\Controller\Conversation
+ * @extends \XF\Pub\Controller\Conversation
  */
 class Conversation extends XFCP_Conversation
 {
+    public function actionIndex(ParameterBag $params)
+    {
+        $reply = parent::actionIndex($params);
+        if ($reply instanceof ViewReply)
+        {
+            $reply->setParam('svMoreOptions', true);
+        }
+        return $reply;
+    }
+
     public function actionAddReply(ParameterBag $params)
     {
         if ($this->filter('more_options', 'str'))
